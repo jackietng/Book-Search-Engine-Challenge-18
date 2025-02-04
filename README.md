@@ -85,7 +85,7 @@ npm run develop
 | Variable | Description | Example |
 |----------|-------------|---------|
 | `MONGODB_URI` | MongoDB connection string | `mongodb://localhost:27017/booksearch` |
-| `JWT_SECRET` | JSON Web Token secret | `your_very_secret_key` |
+| `JWT_SECRET` | JSON Web Token secret | `its_a_secret` |
 | `GOOGLE_BOOKS_API_KEY` | Optional Google Books API key | `AIza...` |
 
 ## API Reference
