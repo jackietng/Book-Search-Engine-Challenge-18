@@ -52,13 +52,11 @@ This application uses the following technologies:
 
 ## Screenshots
 
-![HomePage](./HomePage.png)
+Home Page ![HomePage](./HomePage.png)
 
-![BookSearch](./BookSearch.png)
+Book Search ![BookSearchFeatures](./BookSearchFeatures.png)
 
-![BookSearchFeatures](./BookSearchFeatures.png)
-
-![SavedBooks](./SavedBooks.png)
+Saved Books Feature ![SavedBooks](./SavedBooks.png)
 
 ## Installation
 
