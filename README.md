@@ -35,20 +35,15 @@ This application uses the following technologies:
 ## User Flow
 
 ### Authentication
-1. User arrives at the application
-2. Can choose to login or signup via modal
-3. Provides credentials (email/password)
-4. Successfully authenticated users gain additional features
+1. User arrives at the application and can choose to login or signup via modal
+2. User provides credentials (email/password) and successfully authenticated users gain additional features 
 
 ### Book Search
-1. Enter search term in search input
-2. View search results with book details
-3. Logged-in users can save books to their list
+1. Users can enter search term in search field and submit to view search results with book details
+2. Logged-in users can save books to their reading list
 
 ### Saved Books
-1. Access saved books section
-2. View personal book collection
-3. Remove books from the list as desired
+Registered users can save, view personal book collection and remove books from the list as desired
 
 ## Screenshots
 
