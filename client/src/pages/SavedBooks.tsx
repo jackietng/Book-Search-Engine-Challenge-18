@@ -13,7 +13,7 @@ const SavedBooks = () => {
     refetchQueries: [{ query: GET_ME }]
   });
 
-  const userData = data?.me || {};
+  const userData: SavedBooksData['me'] = data?.me || { _id: '', username: '', email: '', savedBooks: [] };
 
   const handleDeleteBook = async (bookId: string) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;

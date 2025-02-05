@@ -8,15 +8,17 @@ import { typeDefs, resolvers } from './schemas/index.js';
 import mongoose from 'mongoose';
 import { authenticateToken } from './services/auth.js';  
 
+// Set up file path and directory path 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Load environment variables
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Create Apollo Server
+// Initialize Apollo Server with GraphQL schema definitions and resolvers
 const server = new ApolloServer({
   typeDefs,
   resolvers,
@@ -25,13 +27,14 @@ const server = new ApolloServer({
 // Start Apollo Server
 await server.start();
 
+// Middleware to parse incoming requests
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Apply Apollo Server middleware
+// Set up Apollo Server middleware
 app.use('/graphql', expressMiddleware(server, {
   context: async ({ req }) => {
-    // Get the token from the headers
+    // Extract token from the Authorization header
     const token = req.headers.authorization?.split(' ')[1] || '';
     // Add user to context if token is valid
     try {
@@ -43,7 +46,7 @@ app.use('/graphql', expressMiddleware(server, {
   }
 }));
 
-// Serve static assets in production
+// Serve static files if environment is production
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../../client/dist')));
   
@@ -52,6 +55,7 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
+// Connect to MongoDB database
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/googlebooks')
   .then(() => {
     console.log('Successfully connected to MongoDB.');
