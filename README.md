@@ -35,15 +35,15 @@ This application uses the following technologies:
 ## User Flow
 
 ### Authentication
-1. User arrives at the application and can choose to login or signup via modal
-2. User provides credentials (email/password) and successfully authenticated users gain additional features 
+* User arrives at the application and can choose to login or signup via modal
+* User provides credentials (email/password) and successfully authenticated users gain additional features 
 
 ### Book Search
-1. Users can enter search term in search field and submit to view search results with book details
-2. Logged-in users can save books to their reading list
+* Users can enter search term in search field and submit to view search results with book details
+* Logged-in users can save books to their reading list
 
 ### Saved Books
-Registered users can save, view personal book collection and remove books from the list as desired
+* Registered users can save, view personal book collection and remove books from the list as desired
 
 ## Screenshots
 
@@ -85,7 +85,6 @@ npm run develop
 |----------|-------------|---------|
 | `MONGODB_URI` | MongoDB connection string | `mongodb://localhost:27017/booksearch` |
 | `JWT_SECRET` | JSON Web Token secret | `its_a_secret` |
-| `GOOGLE_BOOKS_API_KEY` | Optional Google Books API key | `AIza...` |
 
 ## License
 
