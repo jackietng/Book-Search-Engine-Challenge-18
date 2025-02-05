@@ -2,7 +2,7 @@
 
 ## Description
 
-A full-stack web application that allows avid readers to search for books, save their favorite titles, and manage their reading list seamlessly.
+A full-stack web application that allows readers to search for books, add books to a personal reading list and manage the reading list. 
 
 ## Table of Contents
 
@@ -12,7 +12,6 @@ A full-stack web application that allows avid readers to search for books, save 
 - [User Flow](#user-flow)
 - [Screenshots](#screenshots)
 - [Installation](#installation)
-- [API Reference](#api-reference)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 
@@ -27,7 +26,6 @@ This application has the following features:
 ## Technology Stack
 
 This application uses the following technologies: 
-* 
 | Frontend | Backend | Authentication | API |
 |----------|---------|----------------|-----|
 | React | GraphQL | JWT | Google Books API |
@@ -54,6 +52,14 @@ This application uses the following technologies:
 
 ## Screenshots
 
+![HomePage](./HomePage.png)
+
+![BookSearch](./BookSearch.png)
+
+![BookSearchFeatures](./BookSearchFeatures.png)
+
+![SavedBooks](./SavedBooks.png)
+
 ## Installation
 
 ### Prerequisites
@@ -64,7 +70,7 @@ This application uses the following technologies:
 ### Steps
 ```bash
 # Clone the repository
-git clone 
+git clone https://github.com/jackietng/Book-Search-Engine-Challenge-18.git 
 
 # Navigate to project directory
 cd Book-Search-Engine
@@ -87,17 +93,6 @@ npm run develop
 | `MONGODB_URI` | MongoDB connection string | `mongodb://localhost:27017/booksearch` |
 | `JWT_SECRET` | JSON Web Token secret | `its_a_secret` |
 | `GOOGLE_BOOKS_API_KEY` | Optional Google Books API key | `AIza...` |
-
-## API Reference
-
-### Authentication Endpoints
-- `POST /graphql/login`: User login
-- `POST /graphql/signup`: User registration
-
-### Book Endpoints
-- `GET /graphql/search`: Search books
-- `POST /graphql/save`: Save a book
-- `DELETE /graphql/remove`: Remove a saved book
 
 ## License
 
